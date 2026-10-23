@@ -62,6 +62,8 @@ How many days of Privilege Leave (PL) does a permanent employee get per year?
 **Expected grounded result:** 12 days  
 **Source:** `hr_manual.pdf`, Page 60
 
+![Privilege Leave answer](screenshots/q1_privilege_leave.png)
+
 ### 2. Probation Period
 
 **Question:**  
@@ -70,6 +72,8 @@ What is the probation period for employees up to Senior Manager?
 **Expected grounded result:** 3 months  
 **Source:** `hr_manual.pdf`, Page 42
 
+![Probation answer](screenshots/q2_probation.png)
+
 ### 3. Health-Insurance Premium
 
 **Question:**  
@@ -77,12 +81,16 @@ What is the company's health-insurance premium amount?
 
 **Expected result:** `Not found`
 
+![Health insurance answer](screenshots/q3_health_insurance.png)
+
 ### 4. GST Rate
 
 **Question:**  
 What is the current GST rate in India?
 
 **Expected result:** `Not found`
+
+![GST answer](screenshots/q4_gst_not_found.png)
 
 ### 5. Maternity Leave
 
@@ -93,8 +101,6 @@ How many days of maternity leave are given?
 **Source:** `hr_manual.pdf`, Page 62
 
 ![Maternity leave answer](screenshots/q5_maternity_leave.png)
-
-> **Screenshot note:** The maternity answer screenshot was present in the project folder. Screenshots for the other four questions were not available and have not been fabricated.
 
 ## Additional Demo Questions
 
@@ -136,8 +142,12 @@ HR-Policy-Assistant/
 │   └── generated locally; excluded from Git
 │
 ├── screenshots/
-│   ├── rag_workflow.svg
-│   └── q5_maternity_leave.png
+│   ├── q1_privilege_leave.png
+│   ├── q2_probation.png
+│   ├── q3_health_insurance.png
+│   ├── q4_gst_not_found.png
+│   ├── q5_maternity_leave.png
+│   └── rag_workflow.svg
 │
 ├── tests/
 │   └── test_hr_policy_assistant.py
@@ -206,7 +216,7 @@ The retrieved HR policy excerpts support the 12-day entitlement and the calendar
 
 ## Submission Evidence
 
-The `screenshots/rag_workflow.svg` diagram shows the PDF-to-answer workflow. The available maternity answer screenshot is included as `screenshots/q5_maternity_leave.png`. Capture screenshots for the other questions from the running Streamlit application if further visual evidence is required.
+The `screenshots/rag_workflow.svg` diagram and all five assignment answer screenshots are included above.
 
 ---
 
