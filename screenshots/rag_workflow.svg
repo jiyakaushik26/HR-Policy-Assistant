@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="590" viewBox="0 0 1440 590" role="img" aria-labelledby="title desc">
+  <title id="title">HR Policy Assistant RAG workflow</title>
+  <desc id="desc">The HR Manual PDF is loaded, split into page-preserving chunks, locally embedded into ChromaDB, retrieved for a question, and passed to Gemini for grounded answers displayed with source and evidence.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f5f9fb"/>
+      <stop offset="1" stop-color="#eaf3f4"/>
+    </linearGradient>
+    <linearGradient id="header" x1="0" x2="1">
+      <stop offset="0" stop-color="#132b40"/>
+      <stop offset="1" stop-color="#19756d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#173749" flood-opacity=".10"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#3d8983"/>
+    </marker>
+    <style>
+      text { font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+      .box-title { fill: #183b49; font-size: 19px; font-weight: 750; }
+      .box-sub { fill: #647982; font-size: 14px; font-weight: 500; }
+      .step { fill: #14766e; font-size: 12px; font-weight: 800; letter-spacing: 1.5px; }
+    </style>
+  </defs>
+  <rect width="1440" height="590" rx="26" fill="url(#background)"/>
+  <path d="M0 0h1440v190H0z" fill="url(#header)"/>
+  <circle cx="1325" cy="32" r="142" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="2"/>
+  <circle cx="1325" cy="32" r="102" fill="none" stroke="#fff" stroke-opacity=".07" stroke-width="2"/>
+  <text x="70" y="72" fill="#c7f3e8" font-size="13" font-weight="800" letter-spacing="2">HR POLICY ASSISTANT • RAG WORKFLOW</text>
+  <text x="70" y="124" fill="#fff" font-size="35" font-weight="760" letter-spacing="-1">From policy document to grounded answer</text>
+  <text x="72" y="158" fill="#d1e5e8" font-size="16">Local retrieval, Gemini answer generation, metadata-derived source pages</text>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="248" width="190" height="190" rx="18" fill="#fff" stroke="#dbe6e9"/>
+    <rect x="278" y="248" width="190" height="190" rx="18" fill="#fff" stroke="#dbe6e9"/>
+    <rect x="508" y="248" width="190" height="190" rx="18" fill="#fff" stroke="#c9e0dc"/>
+    <rect x="738" y="248" width="190" height="190" rx="18" fill="#fff" stroke="#dbe6e9"/>
+    <rect x="968" y="248" width="190" height="190" rx="18" fill="#fff" stroke="#dbe6e9"/>
+    <rect x="1198" y="248" width="194" height="190" rx="18" fill="#fff" stroke="#c9e0dc"/>
+  </g>
+  <g fill="none" stroke="#3d8983" stroke-width="3" marker-end="url(#arrow)">
+    <path d="M242 343h26"/>
+    <path d="M472 343h26"/>
+    <path d="M702 343h26"/>
+    <path d="M932 343h26"/>
+    <path d="M1162 343h26"/>
+  </g>
+
+  <g>
+    <text class="step" x="70" y="285">01 • SOURCE</text>
+    <text class="box-title" x="70" y="328">HR Manual</text>
+    <text class="box-title" x="70" y="353">PDF</text>
+    <text class="box-sub" x="70" y="390">Company policy</text>
+    <text class="box-sub" x="70" y="411">source document</text>
+
+    <text class="step" x="300" y="285">02 • PREPARE</text>
+    <text class="box-title" x="300" y="328">PyPDFLoader</text>
+    <text class="box-sub" x="300" y="365">Page metadata</text>
+    <text class="box-sub" x="300" y="386">preserved in chunks</text>
+
+    <text class="step" x="530" y="285">03 • INDEX</text>
+    <text class="box-title" x="530" y="328">Local TF-IDF</text>
+    <text class="box-title" x="530" y="353">+ ChromaDB</text>
+    <text class="box-sub" x="530" y="390">Offline vectors</text>
+    <text class="box-sub" x="530" y="411">persistent index</text>
+
+    <text class="step" x="760" y="285">04 • RETRIEVE</text>
+    <text class="box-title" x="760" y="328">Question</text>
+    <text class="box-title" x="760" y="353">matching</text>
+    <text class="box-sub" x="760" y="390">Relevant policy</text>
+    <text class="box-sub" x="760" y="411">evidence chunks</text>
+
+    <text class="step" x="990" y="285">05 • GENERATE</text>
+    <text class="box-title" x="990" y="328">Gemini LLM</text>
+    <text class="box-sub" x="990" y="365">Supplied context</text>
+    <text class="box-sub" x="990" y="386">only; no outside</text>
+    <text class="box-sub" x="990" y="407">knowledge</text>
+
+    <text class="step" x="1220" y="285">06 • RESPOND</text>
+    <text class="box-title" x="1220" y="328">Streamlit UI</text>
+    <text class="box-sub" x="1220" y="365">Answer • source</text>
+    <text class="box-sub" x="1220" y="386">page • evidence</text>
+    <text class="box-sub" x="1220" y="407">or Not found</text>
+  </g>
+  <rect x="48" y="478" width="1344" height="60" rx="13" fill="#e1f1ee" stroke="#c8e4de"/>
+  <circle cx="78" cy="508" r="7" fill="#188277"/>
+  <text x="98" y="514" fill="#28545a" font-size="15" font-weight="650">Grounding rule:</text>
+  <text x="222" y="514" fill="#45636a" font-size="15">If retrieved HR-policy evidence does not support an answer, return exactly “Not found”.</text>
+</svg>

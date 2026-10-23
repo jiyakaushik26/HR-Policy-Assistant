@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+**pycache**/
+*.pyc
+.pytest_cache/
+chroma_db/
+.DS_Store
+data/hr_manual.pdf
